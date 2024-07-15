@@ -58,20 +58,70 @@ arr.forEach((str) => {
 });
 console.log(obj2);
 
-///////////////////////5//////////////////////
 
-const animals = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
+///////////////////////6//////////////////////
 
-// animals.map(item=>{
-//     for (const i in item) {
-//         console.log(i);
-//     }
-// })
+let people = [
+  { name: "John", age: 13 },
+  { name: "Mark", age: 56 },
+  { name: "Rachel", age: 45 },
+  { name: "Nate", age: 67 },
+  { name: "Jeniffer", age: 65 },
+];
 
-for (const i in animals) {
-    for (const a in animals) {
-        if (animals[i]===animals[a]) {
-            console.log(animals[i]);
-        }
-    }
+people.sort((a, b) => a.age - b.age);
+let yosh = people[0].age;
+let qari = people[people.length - 1].age;
+
+console.log(qari - yosh);
+
+///////////////////  7  ////////////////
+
+let input = [false, 1, 10, "", null, "sultonqul", 1.13, 0];
+let falsetrue = { true: [], false: [] };
+for (const i in input) {
+  if (input[i]) {
+    falsetrue.true.push(input[i]);
+  } else {
+    falsetrue.false.push(input[i]);
+  }
 }
+console.log(falsetrue);
+
+////////////////////////   8 //////////////////////
+
+function minManWord(str) {
+  let newstr = str.split(" ");
+  let minWord = newstr[0];
+  let maxWord = newstr[0];
+  newstr.forEach((i) => {
+    if (i.length < minWord.length) {
+      minWord = i;
+    }
+    if (i.length > maxWord.length) {
+      maxWord = i;
+    }
+  });
+
+  return {
+    minWord,
+    maxWord,
+  };
+}
+console.log(minManWord("Men dasturlash kursida o’qiyman"));
+
+
+////////////////////////// 10 ////////////////////
+
+
+let matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
+let target=3
+matrix.map(i=>{
+    i.map(item=>{
+        if (item==target) {
+            console.log(true);
+        }
+    })
+})
+
+
