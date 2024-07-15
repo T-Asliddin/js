@@ -161,3 +161,38 @@ for (const i in Input) {
     array.push(`${i}${Input[i]}`)
 }
 console.log(array);
+
+
+
+//////////////////////////  16  //////////////////////////
+
+let products = [
+    {id: 6,name: "Smarthpone", price: 12000, rating: 4.5, discount: 20},
+    {id: 2,name: "Acer", price: 12000, rating: 4.3, discount: 10},
+    {id: 1,name: "Mac book", price: 17000, rating: 4.7, discount: 40},
+    {id: 4,name: "HP", price: 21000, rating: 4.1, discount: 16},
+    ];
+
+   products= products.filter(item=>item.id!==4)
+
+   console.log(products);
+
+
+
+
+   /////////////////////////////  17  /////////////////////////
+
+
+   let inputs = [
+    {name: 'John', age: 13},
+    {name: 'Mark', age: 56},
+    {name: 'Rachel', age: 45},
+    {name: 'Nate', age: 67},
+    {name: 'Jeniffer', age: 65}
+    ];
+
+    inputs.sort((a, b) => a.age - b.age);
+let young = people[0].age;
+let old = people[people.length - 1].age;
+
+console.log(old - young);
