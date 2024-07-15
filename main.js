@@ -58,7 +58,6 @@ arr.forEach((str) => {
 });
 console.log(obj2);
 
-
 ///////////////////////6//////////////////////
 
 let people = [
@@ -110,18 +109,36 @@ function minManWord(str) {
 }
 console.log(minManWord("Men dasturlash kursida o’qiyman"));
 
-
 ////////////////////////// 10 ////////////////////
 
+let matrix = [
+  [1, 3, 5, 7],
+  [10, 11, 16, 20],
+  [23, 30, 34, 60],
+];
+let target = 3;
+matrix.map((i) => {
+  i.map((item) => {
+    if (item == target) {
+      console.log(true);
+    }
+  });
+});
 
-let matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
-let target=3
-matrix.map(i=>{
-    i.map(item=>{
-        if (item==target) {
-            console.log(true);
-        }
-    })
-})
+/////////////////////// 11 ///////////////////////
 
-
+let matrixx = [
+  [5, 1, 9, 11],
+  [2, 4, 8, 10],
+  [13, 3, 6, 7],
+  [15, 14, 12, 16],
+];
+let numm = matrix.length + 1;
+let newarr = [];
+for (let a = 0; a < numm; a++) {
+  newarr.push([]);
+  for (const i in matrixx) {
+    newarr[a].push(matrixx[i][a]);
+  }
+}
+console.log(newarr);
