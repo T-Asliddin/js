@@ -142,3 +142,22 @@ for (let a = 0; a < numm; a++) {
   }
 }
 console.log(newarr);
+
+
+/////////////////////  12  ////////////////////////
+
+let string="sizda qandaydir string bor va shundagi oxirgi so’zning length ni toping"
+let newstring=string.split(" ")
+console.log(newstring[newstring.length-1].length);
+
+
+
+///////////////////////  13  ////////////////////
+
+let Input ={a: 2, b: 5, c: 7}
+let array=[]
+ 
+for (const i in Input) {
+    array.push(`${i}${Input[i]}`)
+}
+console.log(array);
