@@ -143,56 +143,103 @@ for (let a = 0; a < numm; a++) {
 }
 console.log(newarr);
 
+///////////////////  12  ////////////////////////
 
-/////////////////////  12  ////////////////////////
+let string =
+  "sizda qandaydir string bor va shundagi oxirgi so’zning length ni toping";
+let newstring = string.split(" ");
+console.log(newstring[newstring.length - 1].length);
 
-let string="sizda qandaydir string bor va shundagi oxirgi so’zning length ni toping"
-let newstring=string.split(" ")
-console.log(newstring[newstring.length-1].length);
+/////////////////////  13  ////////////////////
 
+let Input = { a: 2, b: 5, c: 7 };
+let array = [];
 
-
-///////////////////////  13  ////////////////////
-
-let Input ={a: 2, b: 5, c: 7}
-let array=[]
- 
 for (const i in Input) {
-    array.push(`${i}${Input[i]}`)
+  array.push(`${i}${Input[i]}`);
 }
 console.log(array);
-
-
 
 //////////////////////////  16  //////////////////////////
 
 let products = [
-    {id: 6,name: "Smarthpone", price: 12000, rating: 4.5, discount: 20},
-    {id: 2,name: "Acer", price: 12000, rating: 4.3, discount: 10},
-    {id: 1,name: "Mac book", price: 17000, rating: 4.7, discount: 40},
-    {id: 4,name: "HP", price: 21000, rating: 4.1, discount: 16},
-    ];
+  { id: 6, name: "Smarthpone", price: 12000, rating: 4.5, discount: 20 },
+  { id: 2, name: "Acer", price: 12000, rating: 4.3, discount: 10 },
+  { id: 1, name: "Mac book", price: 17000, rating: 4.7, discount: 40 },
+  { id: 4, name: "HP", price: 21000, rating: 4.1, discount: 16 },
+];
 
-   products= products.filter(item=>item.id!==4)
+products = products.filter((item) => item.id !== 4);
 
-   console.log(products);
+console.log(products);
 
+/////////////////////////////  17  /////////////////////////
 
+let inputs = [
+  { name: "John", age: 13 },
+  { name: "Mark", age: 56 },
+  { name: "Rachel", age: 45 },
+  { name: "Nate", age: 67 },
+  { name: "Jeniffer", age: 65 },
+];
 
-
-   /////////////////////////////  17  /////////////////////////
-
-
-   let inputs = [
-    {name: 'John', age: 13},
-    {name: 'Mark', age: 56},
-    {name: 'Rachel', age: 45},
-    {name: 'Nate', age: 67},
-    {name: 'Jeniffer', age: 65}
-    ];
-
-    inputs.sort((a, b) => a.age - b.age);
-let young = people[0].age;
-let old = people[people.length - 1].age;
+inputs.sort((a, b) => a.age - b.age);
+let young = inputs[0].age;
+let old = inputs[inputs.length - 1].age;
 
 console.log(old - young);
+
+////////////////////////////////////////////////////////
+
+///////////////////////////  5  ////////////////////////
+
+let animals = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
+
+let newanimals = {};
+
+animals.forEach((item) => {
+  if (newanimals[item]) {
+    newanimals[item]++;
+  } else {
+    newanimals[item] = 1;
+  }
+});
+
+console.log(newanimals);
+
+////////////////////////  15  //////////////////////
+
+function fn(animals) {
+  let newanimals = {};
+  let arr = [];
+  animals.forEach((item) => {
+    if (newanimals[item]) {
+      newanimals[item]++;
+    } else {
+      newanimals[item] = 1;
+    }
+  });
+  for (const i in newanimals) {
+    if (newanimals[i] > 1) {
+      arr.push(i);
+    }
+  }
+  console.log(arr);
+}
+
+fn(animals);
+
+////////////////////////////  14   ////////////////////////////
+
+let findMedianSortedArrays = function (nums1, nums2) {
+  let newarr = [...nums1, ...nums2].sort((a, b) => a - b);
+  let leng = newarr.length;
+  if (leng % 2 === 0) {
+    let res = newarr[leng / 2 - 1] + newarr[leng / 2];
+    console.log(res / 2);
+  } else {
+    console.log(newarr[Math.floor(leng / 2)]);
+  }
+};
+
+findMedianSortedArrays([1, 2], [3, 4]);
