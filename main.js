@@ -58,6 +58,22 @@ arr.forEach((str) => {
 });
 console.log(obj2);
 
+// ///////////////////////////  5  ////////////////////////
+
+let animals = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
+
+let newanimals = {};
+
+animals.forEach((item) => {
+  if (newanimals[item]) {
+    newanimals[item]++;
+  } else {
+    newanimals[item] = 1;
+  }
+});
+
+console.log(newanimals);
+
 ///////////////////////6//////////////////////
 
 let people = [
@@ -125,7 +141,7 @@ matrix.map((i) => {
   });
 });
 
-/////////////////////// 11 ///////////////////////
+///////////////////// 11 ///////////////////////
 
 let matrixx = [
   [5, 1, 9, 11],
@@ -133,7 +149,7 @@ let matrixx = [
   [13, 3, 6, 7],
   [15, 14, 12, 16],
 ];
-let numm = matrix.length + 1;
+let numm = matrixx.length;
 let newarr = [];
 for (let a = 0; a < numm; a++) {
   newarr.push([]);
@@ -143,7 +159,7 @@ for (let a = 0; a < numm; a++) {
 }
 console.log(newarr);
 
-///////////////////  12  ////////////////////////
+/////////////////  12  ////////////////////////
 
 let string =
   "sizda qandaydir string bor va shundagi oxirgi so’zning length ni toping";
@@ -159,6 +175,42 @@ for (const i in Input) {
   array.push(`${i}${Input[i]}`);
 }
 console.log(array);
+
+
+////////////////////////////  14   ////////////////////////////
+
+let findMedianSortedArrays = function (nums1, nums2) {
+  let newarr = [...nums1, ...nums2].sort((a, b) => a - b);
+  let leng = newarr.length;
+  if (leng % 2 === 0) {
+    let res = newarr[leng / 2 - 1] + newarr[leng / 2];
+    console.log(res / 2);
+  } else {
+    console.log(newarr[Math.floor(leng / 2)]);
+  }
+};
+
+findMedianSortedArrays([1, 2], [3, 4]);
+
+// ////////////////////////  15  //////////////////////
+function fn(animals) {
+  let newanimals = {};
+  let arr = [];
+  animals.forEach((item) => {
+    if (newanimals[item]) {
+      newanimals[item]++;
+    } else {
+      newanimals[item] = 1;
+    }
+  });
+  for (const i in newanimals) {
+    if (newanimals[i] > 1) {
+      arr.push(i);
+    }
+  }
+  console.log(arr);
+}
+fn(["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"]);
 
 //////////////////////////  16  //////////////////////////
 
@@ -189,57 +241,12 @@ let old = inputs[inputs.length - 1].age;
 
 console.log(old - young);
 
-////////////////////////////////////////////////////////
 
-///////////////////////////  5  ////////////////////////
 
-let animals = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
 
-let newanimals = {};
 
-animals.forEach((item) => {
-  if (newanimals[item]) {
-    newanimals[item]++;
-  } else {
-    newanimals[item] = 1;
-  }
-});
 
-console.log(newanimals);
 
-////////////////////////  15  //////////////////////
 
-function fn(animals) {
-  let newanimals = {};
-  let arr = [];
-  animals.forEach((item) => {
-    if (newanimals[item]) {
-      newanimals[item]++;
-    } else {
-      newanimals[item] = 1;
-    }
-  });
-  for (const i in newanimals) {
-    if (newanimals[i] > 1) {
-      arr.push(i);
-    }
-  }
-  console.log(arr);
-}
 
-fn(animals);
 
-////////////////////////////  14   ////////////////////////////
-
-let findMedianSortedArrays = function (nums1, nums2) {
-  let newarr = [...nums1, ...nums2].sort((a, b) => a - b);
-  let leng = newarr.length;
-  if (leng % 2 === 0) {
-    let res = newarr[leng / 2 - 1] + newarr[leng / 2];
-    console.log(res / 2);
-  } else {
-    console.log(newarr[Math.floor(leng / 2)]);
-  }
-};
-
-findMedianSortedArrays([1, 2], [3, 4]);
